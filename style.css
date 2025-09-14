@@ -1,0 +1,155 @@
+body{
+    background-color:#042131;
+    color: grey;
+    font-family: 'Radley', serif;
+  
+   
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 8%;
+    min-height: 100vh;
+  
+    flex-wrap: wrap;
+}
+.hero-text {
+    flex: 1;
+    padding-right: 2rem;
+   min-width: 300px;
+}
+.hero-text h1 {
+    font-size: 2.8rem;
+    line-height: 1.3;
+    color: white;
+}
+
+.hero-text .colored-text {
+    color: #00bcd4; 
+    font-weight: bold;
+}
+.hero-text p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    line-height: 1.8;
+    color: #cccccc;
+    max-width: 100ch;
+    
+}
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 200%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+@media (max-width: 900px) {
+    .hero-section {
+        flex-direction: column; 
+        text-align: center;
+        padding: 2rem 5%;
+    }
+    
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-image img {
+        max-width: 80%; }
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8%;
+    color: white;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  
+}
+.name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00bcd4;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #00bcd4;
+}
+.menu-toggle {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: block; 
+    }
+
+    .nav-links { position: absolute;
+        top: 70px;
+       left: 3%;
+        background-color: #021620;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        border-radius: 10px;
+        display: none; 
+    }
+
+    .nav-links.active {
+        display: flex; 
+         
+    }
+}
+.socials {
+     display: flex; 
+     justify-content:flex-start;
+      gap: 2rem; 
+      margin-top: 2rem; 
+      margin-bottom: 2rem;}
+
+.socials a {
+    color: #cccccc;
+    font-size: 2rem;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.socials a:hover {
+    color: #00bcd4;
+    transform: scale(1.2);
+}
+.hero-left {
+    flex: 1;
+    position: relative; 
+    min-width: 300px;
+}
+@media (max-width: 900px) {
+    .socials {
+        justify-content: center; 
+    }
+}
